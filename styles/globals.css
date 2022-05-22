@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+p {
+  margin: 1.5rem 0;
+  line-height: 1.5;
+  word-spacing: 2px;
+  font-weight: 300;
+}

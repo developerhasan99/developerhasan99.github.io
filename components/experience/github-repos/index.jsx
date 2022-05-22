@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import fetchGithubRepos from "../../../utils/fetch-github-repos";
 import RepoCard from "./repo-card";
 
-const CardsWrapper = styled.div`
+const CardsWrapper = styled.ul`
   margin: 0 -10px;
   padding: 0;
   list-style-type: none;
@@ -23,31 +23,49 @@ const CardWrapper = styled.li`
   }
 `;
 
+const P = styled.p`
+  padding: 0 15px;
+  font-size: 30px;
+  ${(props) => props.error && `color: red;`}
+`;
+
 function GithubRepos() {
   const [arrayList, setArrayList] = useState([]);
 
   useEffect(() => {
     (async () => {
       const githubRepos = await fetchGithubRepos();
+      if (githubRepos) {
+        setArrayList(githubRepos);
+        return;
+      }
       setArrayList(githubRepos);
     })();
   }, []);
 
-  const listItems = arrayList.map((repo) => {
-    return (
-      <CardWrapper key={repo.id}>
-        <RepoCard
-          html_url={repo.html_url}
-          name={repo.name}
-          description={repo.description}
-          language={repo.language}
-          updated_at={repo.updated_at}
-        />
-      </CardWrapper>
-    );
-  });
+  let cardItems = <P>Loading...</P>;
 
-  return <CardsWrapper>{listItems}</CardsWrapper>;
+  if (arrayList && arrayList.length !== 0) {
+    cardItems = arrayList.map((repo) => {
+      return (
+        <CardWrapper key={repo.id}>
+          <RepoCard
+            html_url={repo.html_url}
+            name={repo.name}
+            description={repo.description}
+            language={repo.language}
+            updated_at={repo.updated_at}
+          />
+        </CardWrapper>
+      );
+    });
+  }
+
+  if (!arrayList) {
+    cardItems = <P error>Can not fetch Github API!</P>;
+  }
+
+  return <CardsWrapper>{cardItems}</CardsWrapper>;
 }
 
 export default GithubRepos;

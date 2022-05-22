@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 
 const Description = styled.p`
-  margin-bottom: 18px;
+  margin: 18px 0;
   font-size: 14px;
+  font-weight: 400;
 `;
 
 function CardDescription({ description }) {

@@ -2,13 +2,15 @@ import styled from "@emotion/styled";
 import CardDescription from "./card-description";
 import CardCaption from "./card-caption";
 
+import FadeIn from "react-fade-in";
+import { useEffect, useRef, useState } from "react";
+
 const Card = styled.a`
   display: block;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem;
   border: rgba(0, 0, 0, 0.1) 1px solid;
   border-radius: 5px;
   height: 100%;
-  position: relative;
 `;
 
 const CardHeading = styled.h4`
@@ -20,12 +22,34 @@ const CardHeading = styled.h4`
 `;
 
 function RepoCard({ html_url, name, description, language, updated_at }) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(entries[0].isIntersecting);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.7,
+      }
+    );
+
+    observer.observe(cardRef.current);
+  }, []);
+
   return (
-    <Card href={html_url}>
-      <CardHeading>{name}</CardHeading>
-      <CardDescription description={description} />
-      <CardCaption language={language} updated_at={updated_at} />
-    </Card>
+    <FadeIn visible={isVisible} transitionDuration={1000}>
+      <Card href={html_url} ref={cardRef}>
+        <CardHeading>{name}</CardHeading>
+        <CardDescription description={description} />
+        <CardCaption language={language} updated_at={updated_at} />
+      </Card>
+    </FadeIn>
   );
 }
 

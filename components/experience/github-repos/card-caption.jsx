@@ -5,9 +5,7 @@ import githubColors from "../../../utils/github-colors";
 const Caption = styled.p`
   font-size: 12px;
   margin-bottom: 0;
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
+  font-weight: 400;
 `;
 
 const RepoLang = styled.span`
