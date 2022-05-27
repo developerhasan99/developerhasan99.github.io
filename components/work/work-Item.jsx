@@ -60,7 +60,7 @@ function WorkItem({ src, title, github, site }) {
     observer.observe(cardRef.current);
   }, []);
   return (
-    <Col>
+    <Col width="33.333333%">
       <FadeIn transitionDuration={700} visible={isVisible}>
         <Div ref={cardRef}>
           <Img src={src} alt={title} />

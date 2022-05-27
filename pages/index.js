@@ -1,13 +1,14 @@
 import { useState } from "react";
 
 import SeoHead from "../components/seo-head";
-import Header from "../components/header";
+import Header from "../components/Header/Header";
 import Hero from "../components/hero";
 import About from "../components/about";
-import Experience from "../components/experience";
+import Experience from "../components/experience/Experience";
 import Resume from "../components/resume";
 import Passion from "../components/service";
 import Work from "../components/work";
+import Contact from "../components/Contact/Contact";
 
 function Home() {
   const [isSticky, setIsSticky] = useState(false);
@@ -24,6 +25,7 @@ function Home() {
       <Resume />
       <Passion />
       <Work />
+      <Contact />
     </>
   );
 }

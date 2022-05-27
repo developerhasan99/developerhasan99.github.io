@@ -12,8 +12,12 @@ const Div = styled.div`
   }
 `;
 
-function Col({ children, width }) {
-  return <Div width={width}>{children}</Div>;
+function Col({ children, width, style }) {
+  return (
+    <Div style={style} width={width}>
+      {children}
+    </Div>
+  );
 }
 
 export default Col;

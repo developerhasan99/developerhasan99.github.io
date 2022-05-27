@@ -13,6 +13,9 @@ const H2 = styled.h2`
   letter-spacing: 3px;
   margin: 0 0 0 10px;
   font-weight: 300;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 function Logo() {

@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import Container from "../common/container";
 import Logo from "./logo";
 import NavLinks from "./nav-links";
+import NavToggler from "./NavToggler";
 
 const Nav = styled.nav`
   padding: 20px 0;
@@ -26,6 +27,7 @@ const Header = ({ isSticky }) => {
       >
         <Logo />
         <NavLinks />
+        <NavToggler />
       </Container>
     </Nav>
   );
