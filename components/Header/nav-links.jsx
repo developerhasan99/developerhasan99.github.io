@@ -7,11 +7,12 @@ const Ul = styled.ul`
   padding: 0;
   list-style-type: none;
   display: flex;
+  transition: 0.4s ease-in-out;
   @media (max-width: 767px) {
     position: fixed;
     display: block;
     top: 0;
-    right: 0;
+    right: ${(props) => (props.isMobileNav ? "0" : "-250px")};
     bottom: 0;
     width: 250px;
     background-color: #f0f0f0;
@@ -19,10 +20,10 @@ const Ul = styled.ul`
   }
 `;
 
-function NavLinks() {
+function NavLinks({ isMobileNav, handleMobileNav }) {
   return (
-    <Ul>
-      <NavCloser />
+    <Ul isMobileNav={isMobileNav}>
+      <NavCloser handleMobileNav={handleMobileNav} />
       <LinkItem text="About" />
       <LinkItem text="Experience" />
       <LinkItem text="Passion" />

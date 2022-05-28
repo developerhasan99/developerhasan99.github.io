@@ -10,9 +10,9 @@ const Button = styled.button`
   }
 `;
 
-function NavToggler() {
+function NavToggler({ handleMobileNav }) {
   return (
-    <Button>
+    <Button onClick={handleMobileNav}>
       <img src="./menu.svg" alt="Menu" />
     </Button>
   );

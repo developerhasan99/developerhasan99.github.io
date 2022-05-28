@@ -15,10 +15,10 @@ const Nav = styled.nav`
   ${({ isSticky }) =>
     isSticky &&
     `background-color: #040810;
-  padding: 10px 0;`}
+    padding: 10px 0;`}
 `;
 
-const Header = ({ isSticky }) => {
+const Header = ({ isSticky, isMobileNav, handleMobileNav }) => {
   return (
     <Nav isSticky={isSticky}>
       <Container
@@ -26,8 +26,8 @@ const Header = ({ isSticky }) => {
         style={{ display: "flex", justifyContent: "space-between" }}
       >
         <Logo />
-        <NavLinks />
-        <NavToggler />
+        <NavLinks isMobileNav={isMobileNav} handleMobileNav={handleMobileNav} />
+        <NavToggler handleMobileNav={handleMobileNav} />
       </Container>
     </Nav>
   );

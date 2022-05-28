@@ -43,7 +43,7 @@ function Contact() {
           ]}
         />
         <Flex>
-          <A href="">
+          <A href="https://www.linkedin.com/in/mehedihasan347/">
             <img
               width={150}
               height={45}
@@ -53,7 +53,7 @@ function Contact() {
             <P>Connect me on Linkedin</P>
           </A>
           <Separetor>or</Separetor>
-          <A href="">
+          <A href="https://www.upwork.com/freelancers/~01e0d306e3c729d12e">
             <img
               width={150}
               height={45}
