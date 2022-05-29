@@ -39,7 +39,11 @@ function SocialLinks() {
         icon="./network/github.svg"
         alt="Github"
       />
-      <SocialLink link="" icon="./network/codepen.svg" alt="Codepen" />
+      <SocialLink
+        link="https://codepen.io/developerhasan99"
+        icon="./network/codepen.svg"
+        alt="Codepen"
+      />
     </Ul>
   );
 }

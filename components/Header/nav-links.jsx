@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import context from "../../context/context";
 import LinkItem from "./LinkItem";
 import NavCloser from "./NavCloser";
 
@@ -20,30 +22,17 @@ const Ul = styled.ul`
   }
 `;
 
-function NavLinks({ isMobileNav, handleMobileNav }) {
+function NavLinks() {
+  const { state } = useContext(context);
+
   return (
-    <Ul isMobileNav={isMobileNav}>
-      <NavCloser handleMobileNav={handleMobileNav} />
+    <Ul isMobileNav={state.isMobileNav}>
+      <NavCloser />
       <LinkItem text="About" />
       <LinkItem text="Experience" />
       <LinkItem text="Passion" />
       <LinkItem text="Works" />
       <LinkItem text="Contact" />
-      {/* <Li>
-        <A>About</A>
-      </Li>
-      <Li>
-        <A>Experience</A>
-      </Li>
-      <Li>
-        <A>Passion</A>
-      </Li>
-      <Li>
-        <A>Work</A>
-      </Li>
-      <Li>
-        <A>Contact</A>
-      </Li> */}
     </Ul>
   );
 }

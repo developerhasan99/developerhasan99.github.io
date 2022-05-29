@@ -28,7 +28,7 @@ function WorkGallery() {
         site="https://developerhasan99.github.io/blogr-landing-page-main/"
         github="https://github.com/developerhasan99/blogr-landing-page-main"
       />
-      {/* <WorkItem
+      <WorkItem
         src="./work/m1v21ubdjc2n75bl8p7n.jpg"
         title="Space tourism multi-page website"
         site="https://developerhasan99.github.io/"
@@ -40,7 +40,7 @@ function WorkGallery() {
         site="https://developerhasan99.github.io/"
         github="https://github.com/developerhasan99"
       />
-      <WorkItem
+      {/* <WorkItem
         src="./work/dnn0oqu9q1r6dpq2lmr8.jpg"
         title="Space tourism multi-page website"
         site="https://developerhasan99.github.io/"

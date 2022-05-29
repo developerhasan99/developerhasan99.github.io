@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import context from "../../context/context";
 
 const Button = styled.button`
   cursor: pointer;
@@ -10,7 +12,9 @@ const Button = styled.button`
   }
 `;
 
-function NavToggler({ handleMobileNav }) {
+function NavToggler() {
+  const { handleMobileNav } = useContext(context);
+
   return (
     <Button onClick={handleMobileNav}>
       <img src="./menu.svg" alt="Menu" />

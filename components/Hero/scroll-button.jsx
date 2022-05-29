@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
 
-const Button = styled.button`
+const A = styled.a`
   margin: 120px 0 80px;
   border: 0;
+  display: inline-block;
   background-color: transparent;
   cursor: pointer;
 `;
@@ -32,9 +33,9 @@ const MouseImg = styled.img`
 
 function ScrollButton() {
   return (
-    <Button>
+    <A href="#about">
       <MouseImg src="./scroll-down.svg" width={20} alt="scroll down!" />
-    </Button>
+    </A>
   );
 }
 

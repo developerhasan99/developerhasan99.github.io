@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import Context from "../../context/context";
 import Container from "../common/container";
 import Logo from "./logo";
 import NavLinks from "./nav-links";
@@ -15,19 +17,24 @@ const Nav = styled.nav`
   ${({ isSticky }) =>
     isSticky &&
     `background-color: #040810;
-    padding: 10px 0;`}
+    padding: 5px 0;`}
+  @media (max-width: 767px) {
+    padding: 10px 0;
+  }
 `;
 
-const Header = ({ isSticky, isMobileNav, handleMobileNav }) => {
+const Header = () => {
+  const { state } = useContext(Context);
+
   return (
-    <Nav isSticky={isSticky}>
+    <Nav isSticky={state.isSticky}>
       <Container
         maxWidth="1200px"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
         <Logo />
-        <NavLinks isMobileNav={isMobileNav} handleMobileNav={handleMobileNav} />
-        <NavToggler handleMobileNav={handleMobileNav} />
+        <NavLinks />
+        <NavToggler />
       </Container>
     </Nav>
   );

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-import { useEffect, useRef } from "react";
+import { useContext } from "react";
 import FadeIn from "react-fade-in";
+import context from "../../context/context";
 import Container from "../common/container";
 import ScrollButton from "./scroll-button";
 
@@ -27,19 +28,8 @@ const H1 = styled.h1`
   font-weight: 300;
 `;
 
-function Hero({ handleNavStat }) {
-  const heroRef = useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        handleNavStat(entries[0].isIntersecting);
-      },
-      {
-        rootMargin: "-250px 0px 0px 0px",
-      }
-    );
-    observer.observe(heroRef.current);
-  }, []);
+function Hero() {
+  const { heroRef } = useContext(context);
 
   return (
     <Section>

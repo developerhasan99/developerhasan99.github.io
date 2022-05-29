@@ -5,11 +5,11 @@ import WorkGallery from "./work-gallery";
 
 function Work() {
   const Section = styled.section`
-    padding: 80px 0;
+    padding: 100px 0 80px;
   `;
 
   return (
-    <Section>
+    <Section id="works">
       <Container maxWidth="1200px" style={{ textAlign: "center" }}>
         <SectionHeader
           heading="What I've Done"

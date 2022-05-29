@@ -5,8 +5,7 @@ import GithubRepos from "./github-repos";
 import TechLogoList from "./tech-logos";
 
 const Section = styled.section`
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0 80px;
   background: #fff;
 `;
 
@@ -19,7 +18,7 @@ const H4 = styled.h4`
 
 function Experience() {
   return (
-    <Section>
+    <Section id="experience">
       <Container maxWidth="992px">
         <SectionHeader
           heading="Experience"

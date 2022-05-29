@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import context from "../../context/context";
 
 const Li = styled.li`
   text-align: right;
@@ -14,7 +16,9 @@ const Button = styled.button`
   background-color: transparent;
 `;
 
-function NavCloser({ handleMobileNav }) {
+function NavCloser() {
+  const { handleMobileNav } = useContext(context);
+
   return (
     <Li>
       <Button onClick={handleMobileNav}>

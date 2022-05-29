@@ -5,13 +5,13 @@ import Row from "../common/row";
 import ServiceCard from "./service-cared";
 
 const Section = styled.section`
-  padding: 80px 0;
+  padding: 100px 0 80px;
   background-color: #f0f0f0;
 `;
 
-function Experiance() {
+function Passion() {
   return (
-    <Section>
+    <Section id="passion">
       <Container maxWidth="1200px" style={{ textAlign: "center" }}>
         <SectionHeader
           heading="Passion"
@@ -45,4 +45,4 @@ function Experiance() {
   );
 }
 
-export default Experiance;
+export default Passion;

@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import context from "../../context/context";
 
-const Li = styled.li``;
+const Li = styled.li`
+  margin: 7px 0;
+`;
 
 const A = styled.a`
   margin: 0 5px;
@@ -25,9 +29,15 @@ const A = styled.a`
 `;
 
 function LinkItem({ text }) {
+  const { handleMobileNav } = useContext(context);
+
+  const href = text.toLocaleLowerCase();
+
   return (
     <Li>
-      <A>{text}</A>
+      <A onClick={handleMobileNav} href={`#${href}`}>
+        {text}
+      </A>
     </Li>
   );
 }

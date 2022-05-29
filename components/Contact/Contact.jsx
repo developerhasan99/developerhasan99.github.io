@@ -1,20 +1,14 @@
 import styled from "@emotion/styled";
-import Col from "../common/Col";
 import Container from "../common/container";
-import Row from "../common/row";
 import SectionHeader from "../common/section-header";
-import Form from "./Form";
 
 const Section = styled.section`
   padding: 80px 0;
   background-color: #f0f0f0;
 `;
 
-const Flex = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
+const TextCenter = styled.div`
+  text-align: center;
 `;
 
 const A = styled.a`
@@ -32,7 +26,7 @@ const Separetor = styled.p`
 
 function Contact() {
   return (
-    <Section>
+    <Section id="contact">
       <Container>
         <SectionHeader
           heading="What's Next?"
@@ -42,7 +36,7 @@ function Contact() {
             "or want to say hi, I'll try my best to get back to you!",
           ]}
         />
-        <Flex>
+        <TextCenter>
           <A href="https://www.linkedin.com/in/mehedihasan347/">
             <img
               width={150}
@@ -62,7 +56,7 @@ function Contact() {
             />
             <P>Hire me on Upwork</P>
           </A>
-        </Flex>
+        </TextCenter>
       </Container>
     </Section>
   );

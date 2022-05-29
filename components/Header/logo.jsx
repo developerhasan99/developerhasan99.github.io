@@ -20,7 +20,7 @@ const H2 = styled.h2`
 
 function Logo() {
   return (
-    <A>
+    <A href="/">
       <img src="./logo.svg" alt="M" width={24} />
       <H2>Mehedi Hasan</H2>
     </A>
