@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -27,10 +27,10 @@ jobs:
       
 
     - name: Installing dependencies
-      run: npm ci
+      run: yarn
 
     - name: Build my App  
-      run: npm run export
+      run: yarn export
      
     - run: touch ./out/.nojekyll
     
