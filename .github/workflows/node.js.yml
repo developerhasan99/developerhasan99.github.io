@@ -26,7 +26,6 @@ jobs:
     - run: yarn install
     - run: yarn run export
     
-    - name: Create .nojekyll file
     - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀
