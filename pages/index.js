@@ -13,18 +13,19 @@ import Footer from "../components/Footer/Footer";
 
 function Home() {
   return (
-    <Provider>
-      <SeoHead />
-      <Header />
-      <Hero />
-      <About />
-      <Experience />
-      <Resume />
-      <Passion />
-      <Work />
-      <Contact />
-      <Footer />
-    </Provider>
+    // <Provider>
+    //   <SeoHead />
+    //   <Header />
+    //   <Hero />
+    //   <About />
+    //   <Experience />
+    //   <Resume />
+    //   <Passion />
+    //   <Work />
+    //   <Contact />
+    //   <Footer />
+    // </Provider>
+    <h1>There is noting to see!</h1>
   );
 }
 
