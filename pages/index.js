@@ -1,5 +1,4 @@
 import Provider from "../context/Provider";
-
 import SeoHead from "../components/SEO/SEOHead";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
@@ -12,21 +11,20 @@ import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 
 function Home() {
-  return (
-    // <Provider>
-    //   <SeoHead />
-    //   <Header />
-    //   <Hero />
-    //   <About />
-    //   <Experience />
-    //   <Resume />
-    //   <Passion />
-    //   <Work />
-    //   <Contact />
-    //   <Footer />
-    // </Provider>
-    <h1>There is noting to see!</h1>
-  );
+	return (
+		<Provider>
+			<SeoHead />
+			<Header />
+			<Hero />
+			<About />
+			<Experience />
+			<Resume />
+			<Passion />
+			<Work />
+			<Contact />
+			<Footer />
+		</Provider>
+	);
 }
 
 export default Home;
