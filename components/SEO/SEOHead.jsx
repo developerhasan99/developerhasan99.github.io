@@ -25,15 +25,15 @@ function SeoHead() {
 			<meta property="og:locale" content="en_US" />
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={seoMeta.title} />
-			<meta property="og:description" content={seoMeta.title} />
+			<meta property="og:description" content={seoMeta.description} />
 			<meta property="og:url" content={seoMeta.canonical} />
 			<meta property="og:site_name" content={seoMeta.title} />
 			<meta property="og:image" content={seoMeta.thumbnail} />
 			<meta property="og:image:secure_url" content={seoMeta.thumbnail} />
 			<meta property="og:image:width" content="1200" />
 			<meta property="og:image:height" content="630" />
-			<meta property="og:image:alt" content="Mehedi Hasan" />
-			<meta property="og:image:type" content="image/png" />
+			<meta property="og:image:alt" content="Social thumbnail" />
+			<meta property="og:image:type" content="image/jpg" />
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:title" content={seoMeta.title} />
 			<meta name="twitter:description" content={seoMeta.description} />
