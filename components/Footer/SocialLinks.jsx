@@ -25,7 +25,7 @@ function SocialLinks() {
         alt="Twitter"
       />
       <SocialLink
-        link="https://www.linkedin.com/in/mehedihasan347/"
+        link="https://www.linkedin.com/in/developerhasan99/"
         icon="./network/linkedin.svg"
         alt="Linkedin"
       />

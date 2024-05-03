@@ -24,7 +24,7 @@ function About() {
     <Section id="about">
       <Container maxWidth="650px" style={{ textAlign: "center" }}>
         <H2>A Little Bit About Me</H2>
-        <ProfileImg src="./profile-pic.jpg" alt="Profile Pic" width={170} />
+        <ProfileImg src="./profile-pic.webp" alt="Profile Pic" width={170} />
         <p>
           Hey! My name is Mehedi Hasan and I'm a UX Enthusiast with skills in
           Front-End and WordPress Development. Since beginning my journey as a
